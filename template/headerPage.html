@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+     <title>Classificador de imagens | Luiz Negrinho - Teste para Pickcells</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     
+     <!-- CSS Path -->
+     <link rel="stylesheet" href="{% static 'css/main.css' %}" >
+     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+     
+
+ <!-- Header -->   
+
+</head>
+<body id='headerPage'>
+
+     <div id='topbox' class="container">
+          <!-- Top bar -->
+          <header>
+               <div id='topbar' class="container">
+                    <h5>Classificador de Imagens</h5>
+               </div>
+
+               <!-- Links -->
+               <div id="toplinks">
+                    <a href="/">Home</a>
+                    <a href="viewDataBase">Galeria</a>
+               </div>
+
+     
+          
+          </header>
+     </div>
+
+
+ <!-- Home -->
+     <div id='half-bottom' class='container'>
+
+          <div class="container">
+               {% block content%}
+               {% endblock %}
+          
+          </div>
+               
+               <!-- Footer-->
+               
+               <footer id='footer-block' class='container'>
+                         
+                    <div class="dev"> 
+                         <p>Luiz Antonio V. de M. M. C. Negrinho </p>
+                    </div>
+                    
+                    <div class="footer-link"> 
+                         <a href="mailto:luizavm@gmail.com">luizavm@gmail.com</a>
+                    </div>
+                    
+               </footer>
+          
+     </div>
+          
+</body>
+</html>

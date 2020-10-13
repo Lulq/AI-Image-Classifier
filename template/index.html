@@ -1,0 +1,37 @@
+{% extends 'headerPage.html' %}
+
+{% block content%}
+{% load static %}
+
+
+       
+    <h2 id='titulo'>Doberman ou Belga Groenendael?</h2>
+
+    
+    <br>
+    <div class='container'>
+        <form method="post" enctype="multipart/form-data" action="predictImage">
+    
+        {% csrf_token %}
+        <div id='label'><h5 for="fname">Faça o Upload da Imagem para Classificação! </h5> 
+        <br>
+        </div> 
+        <div id='caixadeselecao'>
+            <input id='select' name="filePath" type="file">
+            <input class=botao2 type="submit" value="Enviar" ></div>
+        </div>
+        {% if filePathName %}
+            <img src={{filePathName}} alt='imagename'>
+        {% else %}
+            <img src='./media/capa.jpg' alt='Capa'>
+        {% endif %}  
+    
+    
+        <h2 id='score'>{{retScore}}</h2>
+  
+    </div>
+</form>
+<br>
+
+
+{% endblock %}
